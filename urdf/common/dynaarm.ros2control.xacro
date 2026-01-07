@@ -56,13 +56,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
     </joint>
   </xacro:macro>
 
-  <xacro:macro name="dynaarm_ros2_control" params="tf_prefix ethercat_bus start_in_freeze_mode drive_parameter_folder drive_parameter_folder_default ethercat_addresses mode">
+  <xacro:macro name="dynaarm_ros2_control" params="tf_prefix namespace:='' ethercat_bus start_in_freeze_mode drive_parameter_folder drive_parameter_folder_default ethercat_addresses mode">
     <ros2_control name="${tf_prefix}DynaarmSystem" type="system">
       <hardware>
         <xacro:if value="${mode == 'isaac'}">
           <plugin>joint_state_topic_hardware_interface/JointStateTopicSystem</plugin>
-          <param name="joint_states_topic">/isaac_joint_states</param>
-          <param name="joint_commands_topic">/isaac_joint_command</param>
+          <param name="joint_states_topic">${namespace}/isaac_joint_states</param>
+          <param name="joint_commands_topic">${namespace}/${tf_prefix}isaac_joint_command</param>
           <!-- Isaac wraps joint angles, this helps un-wrap them -->
           <param name="sum_wrapped_joint_states">true</param>
         </xacro:if>
