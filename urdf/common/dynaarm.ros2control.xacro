@@ -110,7 +110,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
       <xacro:if value="${dof >= 6}">
         <xacro:dynaarm_ros2control_joint name="${tf_prefix}wrist_rotation" address="${ethercat_addresses['wrist_rotation']}" mode="${mode}" />
       </xacro:if>
-    
+
       <xacro:if value="${mode != 'isaac'}">
         <gpio name="${tf_prefix}DynaarmSystem">
           <command_interface name="freeze_mode" />
