@@ -17,5 +17,6 @@ jobs:
     with:
       ros_distro: jazzy
       ros_repo: main
-      upstream_workspace: ''
+      upstream_workspace: 'repos.list'
       ref_for_scheduled_build: main
+      before_install_upstream_dependencies: 'sudo apt install -y libboost-regex-dev'
