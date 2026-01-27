@@ -35,13 +35,13 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     params="tf_prefix parent_link collision:='simple' dof mode ethercat_bus drive_order:='' start_in_freeze_mode:=false drive_parameter_folder:='' covers version *origin">
 
     <!-- Allow the user to pass the drive order file -->
-    <xacro:property name="default_drive_order_file" value="$(find dynaarm_description)/urdf/common/${version}/drive_order.yaml" />
+    <xacro:property name="default_drive_order_file" value="$(find duatic_dynaarm_description)/urdf/common/${version}/drive_order.yaml" />
     <xacro:property name="drive_order_file" value="${default_drive_order_file if drive_order == '' else drive_order}" />
     <!-- Obtain the EtherCAT drive order (address order list) -->
     <xacro:property name="ethercat_addresses" value="${xacro.load_yaml(drive_order_file)}"/>
 
     <!--Allow the user to pass a custom folder for drive parameters-->
-    <xacro:property name="default_drive_parameter_folder" value="$(find dynaarm_driver)/config/${version}" />
+    <xacro:property name="default_drive_parameter_folder" value="$(find duatic_dynaarm_driver)/config/${version}" />
     <xacro:if value="${drive_parameter_folder == ''}">
       <xacro:property name="drive_parameter_folder_internal" value="${default_drive_parameter_folder}" />
     </xacro:if>
@@ -51,10 +51,10 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- Set ee_parent based on the specified DoF -->
     <xacro:property name="ee_parent" value="${base}" />
 
-    <xacro:include filename="$(find dynaarm_description)/urdf/common/dynaarm_common.urdf.xacro" />
+    <xacro:include filename="$(find duatic_dynaarm_description)/urdf/common/dynaarm_common.urdf.xacro" />
     <!-- Include the version specific information and also load the ethercat addresses from the drive file -->
-    <xacro:include filename="$(find dynaarm_description)/urdf/common/${version}/dynaarm_parameters.urdf.xacro" />
-    <xacro:include filename="$(find dynaarm_description)/urdf/common/dynaarm.ros2control.xacro" />
+    <xacro:include filename="$(find duatic_dynaarm_description)/urdf/common/${version}/dynaarm_parameters.urdf.xacro" />
+    <xacro:include filename="$(find duatic_dynaarm_description)/urdf/common/dynaarm.ros2control.xacro" />
 
     <xacro:dynaarm_joint_fixed joint_name="${joint_base_name}"
       parent="${parent_link}"

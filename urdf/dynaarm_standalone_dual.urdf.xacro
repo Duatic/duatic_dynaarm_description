@@ -31,7 +31,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   <!-- Path to ros2_control controller config file -->
   <xacro:arg name="controller_path" default="" />
 
-  <xacro:include filename="$(find dynaarm_description)/urdf/dynaarm.urdf.xacro" />
+  <xacro:include filename="$(find duatic_dynaarm_description)/urdf/dynaarm.urdf.xacro" />
 
   <link name="base_link" />
 
@@ -61,7 +61,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
 
   <!-- DynaArm Gazebo Ros2 Control-->
   <!-- Gazebo Ros2 Control -->
-  <xacro:include filename="$(find duatic_control)/urdf/plugins.urdf.xacro" />
+  <xacro:include filename="$(find duatic_duatic_control)/urdf/plugins.urdf.xacro" />
   <xacro:control namespace="$(arg namespace)">
     <remapping>cmd_vel:=cmd_vel</remapping> <!-- TODO: This line only exists, because otherwise the xacro doesn't compile -->
   </xacro:control>

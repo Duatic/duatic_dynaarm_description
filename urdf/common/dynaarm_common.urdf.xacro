@@ -37,7 +37,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <visual>
                 <geometry>
                     <mesh
-                        filename="file://$(find dynaarm_description)/meshes/${version}/${file_name}"
+                        filename="file://$(find duatic_dynaarm_description)/meshes/${version}/${file_name}"
                         scale="1.0 1.0 1.0" />
                 </geometry>
                 <material name="carbon_fiber">
@@ -58,7 +58,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <visual>
                 <geometry>
                     <mesh
-                        filename="file://$(find dynaarm_description)/meshes/${version}/${file_name}"
+                        filename="file://$(find duatic_dynaarm_description)/meshes/${version}/${file_name}"
                         scale="1.0 1.0 1.0" />
                 </geometry>
             </visual>
@@ -75,7 +75,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <visual>
                 <geometry>
                     <mesh
-                        filename="file://$(find dynaarm_description)/meshes/${version}/${file_name}"
+                        filename="file://$(find duatic_dynaarm_description)/meshes/${version}/${file_name}"
                         scale="1.0 1.0 1.0" />
                 </geometry>
             </visual>
