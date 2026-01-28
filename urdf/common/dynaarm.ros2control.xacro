@@ -61,8 +61,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
       <hardware>
         <xacro:if value="${mode == 'isaac'}">
           <plugin>joint_state_topic_hardware_interface/JointStateTopicSystem</plugin>
-          <param name="joint_states_topic">${namespace}/isaac_joint_states</param>
-          <param name="joint_commands_topic">${namespace}/${tf_prefix}isaac_joint_command</param>
+          <param name="joint_states_topic">isaac_joint_states</param>
+          <param name="joint_commands_topic">${tf_prefix}isaac_joint_command</param>
           <!-- Isaac wraps joint angles, this helps un-wrap them -->
           <param name="sum_wrapped_joint_states">true</param>
         </xacro:if>
