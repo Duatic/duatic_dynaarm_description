@@ -12,4 +12,13 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}/
 )
 
+if(BUILD_TESTING)
+  find_package(launch_testing_ament_cmake REQUIRED)
+
+  add_launch_test(
+      test/test_launch_view.py
+      TIMEOUT 60
+  )
+endif()
+
 ament_package()
