@@ -6,7 +6,7 @@ repositories:
   duatic_dynaarm_driver:
     type: git
     url: https://github.com/Duatic/duatic_dynaarm_driver.git
-    version: rename
+    version: main
   ethercat_sdk_master:
     type: git
     url: https://github.com/Duatic/ethercat_sdk_master.git
