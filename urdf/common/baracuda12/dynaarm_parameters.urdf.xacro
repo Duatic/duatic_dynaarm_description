@@ -1,5 +1,6 @@
+<?xml version="1.0"?>
 <!--
-Copyright 2024 Duatic AG
+Copyright 2026 Duatic AG
 
 Redistribution and use in source and binary forms, with or without modification, are permitted
 provided that the following conditions are met:
@@ -24,6 +25,7 @@ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISI
 OF
 THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
+
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:property name="arm_version_name" value="baracuda12"/>
 
@@ -386,7 +388,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="file://$(find dynaarm_description)/meshes/baracuda12/collision_meshes/base_collision_mesh.stl"
+            filename="file://$(find duatic_dynaarm_description)/meshes/baracuda12/collision_meshes/base_collision_mesh.stl"
             scale="1 1 1" />
         </geometry>
       </collision>
@@ -397,7 +399,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="file://$(find dynaarm_description)/meshes/baracuda12/collision_meshes/shoulder_collision_mesh.stl"
+            filename="file://$(find duatic_dynaarm_description)/meshes/baracuda12/collision_meshes/shoulder_collision_mesh.stl"
             scale="1 1 1" />
         </geometry>
       </collision>
@@ -408,7 +410,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="file://$(find dynaarm_description)/meshes/baracuda12/collision_meshes/upperarm_collision_mesh.stl"
+            filename="file://$(find duatic_dynaarm_description)/meshes/baracuda12/collision_meshes/upperarm_collision_mesh.stl"
             scale="1 1 1" />
         </geometry>
       </collision>
@@ -419,7 +421,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="file://$(find dynaarm_description)/meshes/baracuda12/collision_meshes/elbow_collision_mesh.stl"
+            filename="file://$(find duatic_dynaarm_description)/meshes/baracuda12/collision_meshes/elbow_collision_mesh.stl"
             scale="1 1 1" />
         </geometry>
       </collision>
@@ -430,7 +432,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="file://$(find dynaarm_description)/meshes/baracuda12/collision_meshes/forearm_collision_mesh.stl"
+            filename="file://$(find duatic_dynaarm_description)/meshes/baracuda12/collision_meshes/forearm_collision_mesh.stl"
             scale="1 1 1" />
         </geometry>
       </collision>
@@ -441,7 +443,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="file://$(find dynaarm_description)/meshes/baracuda12/collision_meshes/wrist1_collision_mesh.stl"
+            filename="file://$(find duatic_dynaarm_description)/meshes/baracuda12/collision_meshes/wrist1_collision_mesh.stl"
             scale="1 1 1" />
         </geometry>
       </collision>
@@ -452,7 +454,7 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="file://$(find dynaarm_description)/meshes/baracuda12/collision_meshes/wrist2_collision_mesh.stl"
+            filename="file://$(find duatic_dynaarm_description)/meshes/baracuda12/collision_meshes/wrist2_collision_mesh.stl"
             scale="1 1 1" />
         </geometry>
       </collision>

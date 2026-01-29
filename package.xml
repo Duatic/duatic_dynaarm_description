@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>dynaarm_description</name>
+  <name>duatic_dynaarm_description</name>
   <version>1.0.0</version>
   <description>URDF description for the DUATIC DynaArms</description>
 
@@ -16,7 +16,7 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <exec_depend>xacro</exec_depend>
-  <exec_depend>dynaarm_driver</exec_depend>
+  <exec_depend>duatic_dynaarm_driver</exec_depend>
   <exec_depend>duatic_control</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>joint_state_publisher</exec_depend>

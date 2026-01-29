@@ -1,4 +1,4 @@
-# Copyright 2024 Duatic AG
+# Copyright 2026 Duatic AG
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that
 # the following conditions are met:
@@ -65,8 +65,8 @@ def launch_setup(context, *args, **kwargs):
     dual_value = dual.perform(context).strip().lower()
 
     # Load the robot description
-    pkg_share_description = FindPackageShare(package="dynaarm_description").find(
-        "dynaarm_description"
+    pkg_share_description = FindPackageShare(package="duatic_dynaarm_description").find(
+        "duatic_dynaarm_description"
     )
 
     is_dual = string_to_bool(dual_value)
@@ -118,7 +118,7 @@ def launch_setup(context, *args, **kwargs):
         arguments=[
             "-d",
             os.path.join(
-                get_package_share_directory("dynaarm_description"),
+                get_package_share_directory("duatic_dynaarm_description"),
                 "config",
                 "config.rviz",
             ),
