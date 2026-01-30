@@ -47,14 +47,14 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <!-- NOTE this is the bare minimum example of only the description
     For an example on how to use ros2control with the dynaarm take a look at the duatic_dynaarm_demo repository
   -->
-  <xacro:dynaarm tf_prefix="$(arg tf_prefix)"
+  <xacro:dynaarm_description tf_prefix="$(arg tf_prefix)"
                 parent_link="base_link"
                 dof="$(arg dof)"
                 collision="$(arg collision)"
                 covers="$(arg covers)"
                 version="$(arg version)">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
-  </xacro:dynaarm>
+  </xacro:dynaarm_description>
 
 
 
