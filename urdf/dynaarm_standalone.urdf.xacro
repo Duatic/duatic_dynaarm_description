@@ -29,43 +29,33 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <robot name="dynaarm" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!--Example single arm setup-->
-  <xacro:arg name="namespace" default="" />
   <xacro:arg name="tf_prefix" default="" />
   <!-- e.g.: 6-->
   <xacro:arg name="dof" default="6" />
   <!-- collision: simple, complex -->
   <xacro:arg name="collision" default="simple" />
-  <!-- real, mock, sim -->
-  <xacro:arg name="mode" default="mock" />
-  <!-- physical ethercat bus, only used for real -->
-  <xacro:arg name="ethercat_bus" default="eth0" />
   <!-- Change to add covers to the arm -->
   <xacro:arg name="covers" default="false" />
   <!-- v1, v2, ... -->
   <xacro:arg name="version" default="baracuda12" />
-  <!-- Path to ros2_control controller config file -->
-  <xacro:arg name="controller_path" default="" />
 
   <xacro:include filename="$(find duatic_dynaarm_description)/urdf/dynaarm.urdf.xacro" />
 
   <link name="base_link" />
 
   <!-- create an instance of the dynaarm xacro macro and fix its base, move it up such that it doesn't intersect with the ground -->
+  <!-- NOTE this is the bare minimum example of only the description
+    For an example on how to use ros2control with the dynaarm take a look at the duatic_dynaarm_demo repository
+  -->
   <xacro:dynaarm tf_prefix="$(arg tf_prefix)"
                 parent_link="base_link"
                 dof="$(arg dof)"
                 collision="$(arg collision)"
-                mode="$(arg mode)"
-                ethercat_bus="$(arg ethercat_bus)"
                 covers="$(arg covers)"
                 version="$(arg version)">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
   </xacro:dynaarm>
 
-  <!-- Gazebo Ros2 Control -->
-  <xacro:include filename="$(find duatic_control)/urdf/plugins.urdf.xacro" />
-  <xacro:control namespace="$(arg namespace)">
-    <remapping>cmd_vel:=cmd_vel</remapping> <!-- TODO: This line only exists, because otherwise the xacro doesn't compile -->
-  </xacro:control>
+
 
 </robot>

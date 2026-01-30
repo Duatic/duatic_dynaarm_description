@@ -11,7 +11,7 @@ import launch_testing
 def generate_test_description():
 
     launch_file_sim = PathJoinSubstitution(
-        [FindPackageShare("dynaarm_description"), "launch", "view.launch.py"]
+        [FindPackageShare("duatic_dynaarm_description"), "launch", "view.launch.py"]
     )
     return (
         LaunchDescription(
